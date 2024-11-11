@@ -31,22 +31,18 @@
   {%- for group in grouped_data %}
     {%- if group.name == "" or group.name == nil %}
       {% assign outros_group = outros_group | concat: group.items %}
+    {%- else %}
+      {% assign ordered_grouped_data = ordered_grouped_data | push: group %}
     {%- endif %}
   {%- endfor %}
 
-  {% if outros_group != emptyarray %}
-    {% assign ordered_grouped_data = ordered_grouped_data | push: "Outros" %}
-  {% endif %}
+  {%- for member in data %}
+    {%- if member.role == "" or member.role == nil %}
+      {% assign outros_group = outros_group | push: member %}
+    {%- endif %}
+  {%- endfor %}
 
-  {% for role in role_order %}
-    {% for group in grouped_data %}
-      {% if group.name == role %}
-        {% assign ordered_grouped_data = ordered_grouped_data | push: group %}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-
-  {% if outros_group != emptyarray %}
+  {% if outros_group.size > 0 %}
     {% assign outros_group = outros_group | group_by: "Outros" %}
     {% assign ordered_grouped_data = ordered_grouped_data | push: outros_group %}
   {% endif %}
