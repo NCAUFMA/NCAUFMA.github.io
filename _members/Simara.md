@@ -2,6 +2,7 @@
 name: Simara Vieira da Rocha
 image: assets/images/membros/m29.15.22 - Simara Rocha.jpeg
 description: 
+role: Professor
 affiliation: DEINF
 linkemail: simara@nca.ufma.br
 linklattes: http://lattes.cnpq.br/3097665029936012

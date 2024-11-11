@@ -1,6 +1,7 @@
 ---
 name: Anselmo Cardoso de Paiva
 description: Possui graduação em Engenharia Civil pela Universidade Estadual do Maranhão (1990), mestrado em Engenharia Civil - Estruturas pela Pontifícia Universidade Católica do Rio de Janeiro (1993) e doutorado em Informática pela Pontifícia Universidade Católica do Rio de Janeiro (2001). Professor Titular da Universidade Federal do Maranhão. Sendo coordenador do Núcleo de Computação Aplicada NCA-UFMA. 
+role: Professor
 affiliation: Departamento de Informatica / UFMA
 linkemail: paiva@nca.ufma.br
 linklattes: http://lattes.cnpq.br/6446831084215512
