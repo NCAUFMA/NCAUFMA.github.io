@@ -1,10 +1,10 @@
 ---
 name: Richard
-description: Aluno
+description: 
 role: Graduação
 affiliation: LINT (Laboratório de Inteligência Interativa)
 links:
-	email: richard.clm@discente.ufma.br
-	lattes: https://lattes.cnpq.br/0337166033522931
+	linkemail: richard.clm@discente.ufma.br
+	linklattes: https://lattes.cnpq.br/0337166033522931
 ---
 

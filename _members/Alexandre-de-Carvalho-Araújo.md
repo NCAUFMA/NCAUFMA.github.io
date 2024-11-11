@@ -1,9 +1,9 @@
 ---
 name: Alexandre de Carvalho Araújo
-description: Aluno
+description: 
 role: Doutorado
 links:
-	email: alexandrearaujo@nca.ufma.br
-	lattes: http://lattes.cnpq.br/1687621059962455
+	linkemail: alexandrearaujo@nca.ufma.br
+	linklattes: http://lattes.cnpq.br/1687621059962455
 ---
 

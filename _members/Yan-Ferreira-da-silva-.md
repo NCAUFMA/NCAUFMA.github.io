@@ -1,12 +1,12 @@
 ---
 name: Yan Ferreira da silva 
-description: Aluno
+description: 
 role: Pós-Doutorado
 affiliation: PPGEE
 links:
-	email: Yan@nca.ufma.br
-	lattes: http://lattes.cnpq.br/0449483301841285
-	orcid: https://orcid.org/0000-0002-2702-9343
-	instagram: Y4nnf 
+	linkemail: Yan@nca.ufma.br
+	linklattes: http://lattes.cnpq.br/0449483301841285
+	linkorcid: https://orcid.org/0000-0002-2702-9343
+	linkinstagram: Y4nnf 
 ---
 

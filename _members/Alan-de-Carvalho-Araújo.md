@@ -1,10 +1,10 @@
 ---
 name: Alan de Carvalho Araújo
-description: Aluno
+description: 
 role: Doutorado
 affiliation: Departamento de Engenharia Elétrica
 links:
-	email: alan.araujo@nca.ufma.br
-	lattes: http://lattes.cnpq.br/0409699949589843
+	linkemail: alan.araujo@nca.ufma.br
+	linklattes: http://lattes.cnpq.br/0409699949589843
 ---
 

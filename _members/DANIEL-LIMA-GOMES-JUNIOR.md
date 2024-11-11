@@ -1,10 +1,10 @@
 ---
 name: DANIEL LIMA GOMES JUNIOR
-description: Ex-Aluno
+description: 
 role: Doutorado
 affiliation: DCOMP/IFMA
 links:
-	email: daniellima@ifma.edu.br
-	lattes: http://lattes.cnpq.br/4754106250302979
+	linkemail: daniellima@ifma.edu.br
+	linklattes: http://lattes.cnpq.br/4754106250302979
 ---
 
