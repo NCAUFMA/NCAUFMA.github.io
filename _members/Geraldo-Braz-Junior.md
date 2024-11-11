@@ -2,6 +2,7 @@
 name: Geraldo Braz Junior
 image: assets/images/membros/m2.jpg
 description: 
+role: Professor
 affiliation: Departamento de Informática
 linkemail: geraldo@nca.ufma.br
 linklattes: http://lattes.cnpq.br/8287861610873629

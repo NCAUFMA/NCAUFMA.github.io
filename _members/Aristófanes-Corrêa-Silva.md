@@ -1,6 +1,7 @@
 ---
 name: Aristófanes Corrêa Silva
 description: 
+role: Professor
 affiliation: Engenharia Elétrica
 linkemail: ari@nca.ufma.br
 linklattes: http://lattes.cnpq.br/2446301582459104
