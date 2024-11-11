@@ -12,11 +12,13 @@
     | sort: "name"
     | reverse
   %}
+
 {%- elsif include.component == "projetos" -%}
   {% assign grouped_data = data
     | group_by: "group"
     | sort: "name"
   %}
+
 {%- elsif include.component == "membros" -%}
   {% assign grouped_data = data
     | group_by: "role"
@@ -48,7 +50,7 @@
     {% assign outros_group = outros_group | group_by: "Outros" %}
     {% assign ordered_grouped_data = ordered_grouped_data | push: outros_group %}
   {% endif %}
-  
+
   {% assign grouped_data = ordered_grouped_data %}
 {%- endif -%}
 
@@ -74,7 +76,7 @@
   <section class="projetos">
     {% include tags.html tags=component_tags %}
     {% include search-info.html %}
-    
+
 {% elsif include.component == "membros" %}
   <section class="membros">
 {% elsif include.component == "publicacoes" %}
@@ -91,22 +93,13 @@
 
   {% for group in grouped_data %}
     {% assign data = group.items %}
-    {% if include.component == "membros" %}
-      {% if group.name == "Outros" %}
-        <div class="tipoecards section" data-title="Outros">
-          <h3 class="role titulosecao">Outros</h3>
-      {% else %}
-        <div class="tipoecards section" data-title="{{ group.name }}">
-          <h3 class="role titulosecao">{{ group.name }}</h3>
-      {% endif %}
-    {% elsif include.component != "membros" %}
-    <div class="tipoecards">
-    {% endif %}      
-      {% if include.component == "noticias" or include.component == "publicacoes" %}
-        <h3 class="ano titulosecao">{{ group.name }}</h3> 
-      {% elsif include.component == "projetos" %}
-        <h3 class="group titulosecao">{{ group.name }}</h3> 
-      {% endif %}
+    {% if group.name == "Outros" %}
+      <div class="tipoecards section" data-title="Outros">
+        <h3 class="role titulosecao">Outros</h3>
+    {% else %}
+      <div class="tipoecards section" data-title="{{ group.name }}">
+        <h3 class="role titulosecao">{{ group.name }}</h3>
+    {% endif %}
 
       {% if include.component == "noticias" %}
         <div class="cardsnoticias">
@@ -120,9 +113,8 @@
 
       {% for d in data %}
         {% assign style = d.style | default: include.style %}
-        
-        {%
-          include {{ include.component | append: ".html" }}
+
+        {% include {{ include.component | append: ".html" }}
           affiliation=d.affiliation
           author=d.author
           authors=d.authors
@@ -133,13 +125,11 @@
           icon=d.icon
           image=d.image
           link=d.link
-          linklattes= d.linklattes
-          linkorcid = d.linkorcid
-          linklinkedin = d.linklinkedin
-          linkemail = d.linkemail
-          linkgithub = d.linkgithub
-          linkinstagram = d.linkinstagram
-          linkx = d.linkx
+          linklattes=d.linklattes
+          linkorcid=d.linkorcid
+          linklinkedin=d.linklinkedin
+          linkemail=d.linkemail
+          linkgithub=d.linkgithub
           name=d.name
           publisher=d.publisher
           repo=d.repo
@@ -154,8 +144,8 @@
         %}
       {% endfor %}
 
-      </div> 
-    </div> 
+      </div>
+    </div>
   {% endfor %}
 
-</section> 
+</section>
