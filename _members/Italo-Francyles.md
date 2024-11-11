@@ -1,7 +1,7 @@
 ---
 name: Italo Francyles
 image: assets/images/membros/m34.jpg
-description: Doutor em Engenharia Elétrica (área de concentração: Ciência da Computação) pela UFMA. Possui experiência com os seguintes temas: processamento, análise e visualização de imagens, visão computacional, aprendizado de máquina, otimização e desenvolvimento de software. 
+description: 'Doutor em Engenharia Elétrica (área de concentração: Ciência da Computação) pela UFMA. Possui experiência com os seguintes temas: processamento, análise e visualização de imagens, visão computacional, aprendizado de máquina, otimização e desenvolvimento de software. '
 role: Pós-Doutorado
 affiliation: DCCMAPI
 linkemail: francyles@nca.ufma.br
