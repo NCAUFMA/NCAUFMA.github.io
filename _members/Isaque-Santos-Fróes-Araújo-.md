@@ -8,6 +8,6 @@ linkemail: santos.isaque@discente.ufma.br
 linklattes: http://lattes.cnpq.br/9401954260658878
 linklinkedin: https://www.linkedin.com/in/isaque-santos-froes-araujo-921a75332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 linkgithub: https://github.com/Isaque-Santos-Froes-Araujo
-linkinstagram: https://www.instagram.com/
+linkinstagram: santos_a07_
 ---
 

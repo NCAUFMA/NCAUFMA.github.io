@@ -7,6 +7,6 @@ linkemail: steven.roger@discente.ufma.br
 linklattes: http://lattes.cnpq.br/4098975359784518
 linklinkedin: https://www.linkedin.com/in/stevensoares/
 linkgithub: https://github.com/W3StevenR
-linkinstagram: https://www.instagram.com/steven_rog_/
+linkinstagram: steven_rog_
 ---
 

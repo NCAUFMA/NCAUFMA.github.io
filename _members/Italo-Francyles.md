@@ -8,6 +8,6 @@ linkemail: francyles@nca.ufma.br
 linklattes: http://lattes.cnpq.br/5461815672803673
 linklinkedin: https://www.linkedin.com/in/italo-francyles-ph-d-7abb72140/
 linkorcid: https://orcid.org/0000-0002-2041-7538
-linkinstagram: @francyles
+linkinstagram: francyles
 ---
 

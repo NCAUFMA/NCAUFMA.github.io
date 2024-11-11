@@ -8,6 +8,6 @@ linkemail: marcos.melo@nca.ufma.br
 linklattes: http://lattes.cnpq.br/6573361384439101
 linklinkedin: https://www.linkedin.com/in/marcos-ferreira-3965a89b/
 linkgithub: https://github.com/MarcosMF86
-linkorcid: 0000-0002-4462-1517
+linkorcid: https://orcid.org/0000-0002-4462-1517
 ---
 

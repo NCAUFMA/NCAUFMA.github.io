@@ -6,7 +6,7 @@ affiliation: Coordenação de Engenharia da Computação
 linkemail: davi.viana@ufma.br
 linklattes: http://lattes.cnpq.br/9297257833779277
 linklinkedin: https://www.linkedin.com/in/davi-viana-73032a55/
-linkgithub: davivds
+linkgithub: https://github.com/davivds
 linkorcid: https://orcid.org/0000-0003-0470-549X
 ---
 

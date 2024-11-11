@@ -7,7 +7,7 @@ affiliation: DeINF
 linkemail: maxwell.pires@nca.ufma.br
 linklattes: http://lattes.cnpq.br/2447621403961722
 linkgithub: https://github.com/Maxw-ll
-linkorcid: 0009-0004-3237-5234
+linkorcid: https://orcid.org/0009-0004-3237-5234
 linkinstagram: maxwell.pires
 ---
 

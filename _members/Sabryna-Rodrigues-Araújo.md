@@ -8,6 +8,6 @@ linkemail: sabryna.ra@discente.ufma.br
 linklattes: http://lattes.cnpq.br/1788136657834045
 linklinkedin: https://www.linkedin.com/in/sabryna-rodrigues/
 linkgithub: https://github.com/SabrynaS
-linkinstagram: https://www.instagram.com/sah_ella/
+linkinstagram: sah_ella
 ---
 

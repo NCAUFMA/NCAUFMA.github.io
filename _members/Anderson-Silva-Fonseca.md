@@ -6,6 +6,6 @@ linkemail: andsf@live.com
 linklattes: http://lattes.cnpq.br/3465955892136150
 linklinkedin: www.linkedin.com/in/andsfonseca
 linkgithub: https://github.com/andsfonseca
-linkinstagram: https://www.instagram.com/andsfonseca/
+linkinstagram: andsfonseca
 ---
 

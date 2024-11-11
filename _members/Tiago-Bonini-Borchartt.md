@@ -7,6 +7,6 @@ linklattes: http://lattes.cnpq.br/2352727269839328
 linklinkedin: https://www.linkedin.com/in/tiago-bonini-borchartt/
 linkgithub: https://github.com/tiagobonini
 linkorcid: https://orcid.org/0000-0002-3709-8385
-linkinstagram: https://www.instagram.com/tiagobonini
+linkinstagram: tiagobonini
 ---
 

@@ -9,6 +9,6 @@ linklattes:  http://lattes.cnpq.br/3460110037331677
 linklinkedin: www.linkedin.com/in/luísfelipe
 linkgithub: https://github.com/Luis-frp
 linkorcid: https://orcid.org/0009-0009-2882-7628
-linkinstagram: https://www.instagram.com/r0chafelipe/
+linkinstagram: r0chafelipe
 ---
 

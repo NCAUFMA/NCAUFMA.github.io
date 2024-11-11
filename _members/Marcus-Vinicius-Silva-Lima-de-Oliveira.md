@@ -6,6 +6,6 @@ affiliation: PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIA DA COMPUTAÇÃO/CCET
 linkemail: marcus.oliveira@nca.ufma.br
 linklattes: http://lattes.cnpq.br/4662092961592078
 linkorcid: https://orcid.org/0000-0002-3562-2198
-linkinstagram: https://www.instagram.com/marcus_vinioliveira/profilecard/?igsh=YWY3M2c4Z3Y3dHR1
+linkinstagram: marcus_vinioliveira
 ---
 

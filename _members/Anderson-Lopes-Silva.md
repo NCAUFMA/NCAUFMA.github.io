@@ -8,7 +8,7 @@ linkemail: anderson.silva@nca.ufma.br
 linklattes: https://lattes.cnpq.br/0446643455742576
 linklinkedin: https://www.linkedin.com/in/anderson-lopes-silva-891774237/
 linkgithub: https://github.com/anddersonls
-linkorcid: 0009-0003-7721-0700
-linkinstagram: https://www.instagram.com/andderson.ls/
+linkorcid: https://orcid.org/0009-0003-7721-0700
+linkinstagram: andderson.ls
 ---
 

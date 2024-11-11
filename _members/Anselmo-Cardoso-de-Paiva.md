@@ -6,6 +6,6 @@ linkemail: paiva@nca.ufma.br
 linklattes: http://lattes.cnpq.br/6446831084215512
 linklinkedin: https://www.linkedin.com/in/anselmo-cardoso-de-paiva-687617238/
 linkorcid: https://orcid.org/0000-0003-4921-0626
-linkinstagram: @anselmocpaiva
+linkinstagram: anselmocpaiva
 ---
 

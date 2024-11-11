@@ -9,6 +9,6 @@ linklattes: http://lattes.cnpq.br/9163031658617099
 linklinkedin: www.linkedin.com/in/núbia-valvan-alves-freitas-2b49b6250
 linkgithub: https://github.com/nubia-valvan
 linkorcid: https://orcid.org/0009-0003-7525-3256
-linkinstagram: https://www.instagram.com/nubia.valvan/
+linkinstagram: nubia.valvan
 ---
 
