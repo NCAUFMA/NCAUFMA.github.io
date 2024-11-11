@@ -1,4 +1,4 @@
-const apiMembroUrl = "http://localhost:3000/submitMembro";
+const apiMembroUrl = "http://localhost:3000/api/submitMembro";
 
 formMembro = document.getElementById("form_membro");
 

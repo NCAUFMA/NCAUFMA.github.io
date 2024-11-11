@@ -6,6 +6,8 @@ role: Professor
 affiliation: DEINF
 linkemail: jdallyson@nca.ufma.br
 linklattes: http://lattes.cnpq.br/6047330108382641
+linklinkedin:
 linkgithub: https://gitlab.com/jdallyson
 linkorcid: https://orcid.org/0000-0001-7013-9700
+linkinstagram:
 ---

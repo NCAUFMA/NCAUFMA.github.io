@@ -5,15 +5,6 @@ section#cadastre-uma-nova-noticia {
   margin-top: -2rem;
 }
 
-input{
-  font: normal 1em Roboto;
-  box-sizing: border-box;
-}
-
-textarea{
-  font: normal 1em Roboto;
-}
-
 .button_row{
   padding: 20px;
   display: flex;
@@ -23,10 +14,10 @@ textarea{
 .submit {
   font: normal 16px Roboto;
   text-decoration: none;
-  background-color: #7a5cfa;
+  background-color: var(--roxoprimary);
   color: #ffffff;
   padding: 14px 52.5px 14px 52.5px;
-  border: 1px solid #7a5cfa;
+  border: 1px solid var(--roxoprimary);
   border-radius: 8px;
   position: relative;
 }
@@ -64,18 +55,12 @@ textarea{
   font: normal 16px Roboto;
   text-decoration: none;
   background-color: #ffffff;
-  color: #7a5cfa;
+  color: var(--roxoprimary);
   padding: 14px 43px 14px 43px;
-  border: 1px solid #7a5cfa;
+  border: 1px solid var(--roxoprimary);
   border-radius: 8px;
 }
 
-.buttonRow > button {
-  padding: 1rem;
-  text-align: center;
-  width: 18%;
-  border-radius: 8px;
-}
 
 #form_fields{
   display: flex;
@@ -165,9 +150,9 @@ form {
 .submit:hover {
     font: normal 16px Roboto;
     text-decoration: none;
-    background-color: #795cfae3;
+    background-color: var(--roxosecondary);
     color: #000000;
     //padding: 14px 52.5px 14px 52.5px;
-    border: 1px solid #7a5cfa;
+    border: 1px solid var(--roxosecondary);
     border-radius: 8px;
   }

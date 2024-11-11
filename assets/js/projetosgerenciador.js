@@ -1,17 +1,15 @@
 async function getProjetos(){
-    const response = await fetch("https://nca-api.vercel.app/api/getProjects");
+    const response = await fetch("http://localhost:3000/api/getProjects");
     try {
         if (!response.ok){
             throw new Error('Erro ao obter projetos' + response.status);
         }
             const json = await response.json().then(result => {
-            let tableBody = document.getElementById("tableBody");
+            let tableBody = document.getElementById("tableBodyProjetos");
     
             let contador = 1;
-            //console.log(data['message']);
             let objData = result['message'];
             var tableRows = document.getElementById("sortableTable").rows.length;
-            console.log(tableRows);
             if (tableRows === 1){
                 for (const [key, value] of Object.entries(objData)) {
                     createNewTDProject(contador , value.titulo, value.subtitulo, value.tags, tableBody);
@@ -34,6 +32,7 @@ if (window.location.pathname === "/gerenciador/projetos/") {
 
 function createNewTDProject(contador ,tituloProj, subTituloProj, tagsProj, tableBody){
     let tr = document.createElement('tr');
+    tr.classList.add('dadopesquisado');
     let tdInt = document.createElement('td');
     tdInt.innerText = contador
     let tdTitulo = document.createElement('td');
@@ -48,10 +47,6 @@ function createNewTDProject(contador ,tituloProj, subTituloProj, tagsProj, table
     
 
     let tdIcon = document.createElement('td');
-    let buttonView = document.createElement('button')
-
-    buttonView.className='action-button view';
-    buttonView.innerText = '🔗';
 
     let buttonEdit = document.createElement('button')
     buttonEdit.className='action-button edit';
@@ -61,7 +56,7 @@ function createNewTDProject(contador ,tituloProj, subTituloProj, tagsProj, table
     buttonDelete.className='action-button delete';
     buttonDelete.innerText = '🗑️';
 
-    tdIcon.appendChild(buttonView);
+
     tdIcon.appendChild(buttonEdit);
     tdIcon.appendChild(buttonDelete);
 

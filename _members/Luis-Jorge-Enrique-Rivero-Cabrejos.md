@@ -6,4 +6,8 @@ role: Professor
 affiliation: DEINF/UFMA
 linkemail: luisrivero@nca.ufma.br
 linklattes: http://lattes.cnpq.br/8534667641706692
+linklinkedin:
+linkgithub:
+linkorcid:
+linkinstagram:
 ---

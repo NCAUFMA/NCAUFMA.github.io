@@ -7,5 +7,7 @@ affiliation: Departamento de Informática/DEINF
 linkemail: dquintanilha@nca.ufma.br
 linklattes: http://lattes.cnpq.br/4222253532775153
 linklinkedin: www.linkedin.com/in/darlan-quintanilha-0b058923
+linkgithub:
 linkorcid: https://orcid.org/0000-0001-8134-4873
+linkinstagram:
 ---

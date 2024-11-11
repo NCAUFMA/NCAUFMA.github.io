@@ -30,7 +30,7 @@
   flex-direction: row;
   align-items: center;
   text-align: left;
-  gap:20px;
+  gap:10px;
   margin: 0;
   justify-content: space-between;
 }
@@ -40,6 +40,7 @@
 }
 .title-user{
   font-size: 30px;
+  white-space: nowrap;
   margin: 0;
 }
 .sidebar-email{
@@ -57,7 +58,7 @@
 
 .button-sidebar i {
   font-size: 30px; 
-  padding:  0 10px;    
+  padding:  0;    
   color: var(--white);          
 }
 .sidebar-email{

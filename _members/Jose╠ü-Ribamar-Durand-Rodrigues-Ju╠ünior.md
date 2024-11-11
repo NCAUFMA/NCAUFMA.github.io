@@ -8,5 +8,7 @@ linkemail: junior_durand@outlook.com
 linklattes: http://lattes.cnpq.br/3668198177200381
 linklinkedin: https://www.linkedin.com/in/junior-durand/
 linkgithub: https://github.com/JuniorDurand
+linkorcid:
+linkinstagram:
 ---
 

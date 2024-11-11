@@ -1,10 +1,12 @@
 ---
-layout: paginas
-show_search: false
-show_post_info: true
-background_image: "assets/images/fundos/fundoneutro.svg"
+layout: default
 ---
 
+{% include headerpagina.html
+  background_image= "assets/images/fundos/fundoneutro.svg"
+  show_search= false
+  show_post_info= true
+%}
 
 <div class="DivImagemNoticia">
   {% include post-info.html imagem=page.image %}

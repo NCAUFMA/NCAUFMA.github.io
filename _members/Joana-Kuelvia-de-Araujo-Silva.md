@@ -6,6 +6,9 @@ role: Graduação
 affiliation: DEINF
 linkemail: joana.silva@nca.ufma.br
 linklattes:  http://lattes.cnpq.br/1155970797185692
+linklinkedin:
+linkgithub:
+linkorcid:
 linkinstagram: "kjoanaa_"
 ---
 

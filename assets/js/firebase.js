@@ -11,6 +11,7 @@ import {
   deleteDoc,
   getDoc } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 
+
 let auth;
 let db;
 
@@ -18,7 +19,7 @@ let db;
 
 async function fetchFirebaseConfig() {
   try {
-    const response = await fetch("https://nca-api.vercel.app/api/getSecretKeys");
+    const response = await fetch("https://api-nca-production.up.railway.app/api/getSecretKeys");
     const firebaseConfig = await response.json();
     const app = initializeApp(firebaseConfig);
 
@@ -55,7 +56,9 @@ function configurarPerfilUsuario(user) {
     : "Administrador";
   
   document.getElementById("userName").innerHTML = fullName;
-  document.getElementById("userEmail").textContent = user.email || "lorem ipsum";
+  const email = user.email || user.providerData[0]?.email || null;
+
+  document.getElementById("userEmail").textContent = email || "lorem ipsum";
   document.getElementById("userLogo").src = user.photoURL || "/assets/images/icones/icone_membro.svg";
 }
 
@@ -80,12 +83,16 @@ const paginasProtegidas = [
 // Verifica permissão do usuário no Firestore
 async function verificarPermissao(email) {
   try {
-    const docRef = doc(db, "users", email); // Assumindo que os e-mails autorizados estão salvos com o ID do documento igual ao e-mail
-    const docSnap = await getDoc(docRef);
-    return docSnap.exists(); // Retorna verdadeiro se o documento existe, indicando que o usuário está autorizado
+      const docRef = doc(db, "users", email);
+      const docSnap = await getDoc(docRef);
+      if (docSnap && docSnap.exists()) {
+          return true; // User is authorized
+      } else {
+          return false; // User document does not exist
+      }
   } catch (error) {
-    console.error("Erro ao verificar permissão de login:", error);
-    return false; // Retorna falso em caso de erro de permissão
+      console.error("Erro ao verificar permissão de login:", error);
+      return false; // Returns false in case of permission error
   }
 }
 
@@ -130,7 +137,9 @@ async function verificarPermissao(email) {
 
 
 async function verificarPrimeiroLogin(user) {
-  const docRef = doc(db, "users", user.email);
+  const email = user.email || user.providerData[0]?.email || null;
+
+  const docRef = doc(db, "users", email);
   const userDoc = await getDoc(docRef);
 
   if (userDoc.exists()) {
@@ -151,7 +160,7 @@ async function verificarPrimeiroLogin(user) {
 
 async function verificarSenha(password, hashedPassword) {
   try {
-    const response = await fetch("https://nca-api.vercel.app/api/verifyPassword", {
+    const response = await fetch("https://api-nca-production.up.railway.app/api/verifyPassword", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ password, hashedPassword })
@@ -186,7 +195,9 @@ async function protegerPagina() {
         window.location.href = "/login";
       } else {
         // Obtém o documento do usuário
-        const userDocRef = doc(db, "users", user.email);
+        const email = user.email || user.providerData[0]?.email || null;
+
+        const userDocRef = doc(db, "users", email);
         const userDoc = await getDoc(userDocRef);
 
         if (userDoc.exists()) {
@@ -216,7 +227,9 @@ async function protegerPagina() {
 
   if (caminhoAtual == "/gerenciador/usuarios/" || caminhoAtual == "/gerenciador/cadastrarusuario/"){
     onAuthStateChanged(auth, async (user) => {
-      const userDocRef = doc(db, "users", user.email);
+      const email = user.email || user.providerData[0]?.email || null;
+
+      const userDocRef = doc(db, "users", email);
       const userDocnew = await getDoc(userDocRef);
 
       if (userDocnew.exists()) {
@@ -245,9 +258,10 @@ async function redefinirSenha(senhaAtual, novaSenha, confirmacaoNovaSenha) {
       alert("A nova senha e a confirmação não coincidem.");
       return;
     }
+    const email = user.email || user.providerData[0]?.email || null;
 
     // Reautentica o usuário com a senha atual
-    const credential = EmailAuthProvider.credential(user.email, senhaAtual);
+    const credential = EmailAuthProvider.credential(email, senhaAtual);
     await reauthenticateWithCredential(user, credential);
     console.log("Usuário reautenticado com sucesso.");
 
@@ -256,7 +270,8 @@ async function redefinirSenha(senhaAtual, novaSenha, confirmacaoNovaSenha) {
     console.log("Senha atualizada com sucesso.");
 
     // Atualiza o campo firstLogin para false no Firestore
-    const userRef = doc(db, "users", user.email);
+
+    const userRef = doc(db, "users", email);
     await updateDoc(userRef, { firstLogin: false });
     console.log("Campo firstLogin atualizado para false.");
 
@@ -321,9 +336,6 @@ function createNewTDUser(contador, email, profile, tableBody) {
   let tdIcon = document.createElement('td');
 
   // Botão de Visualizar
-  let buttonView = document.createElement('button');
-  buttonView.className = 'action-button view';
-  buttonView.innerText = '🔗';
 
   // Botão de Editar
   let buttonEdit = document.createElement('button');
@@ -341,27 +353,25 @@ function createNewTDUser(contador, email, profile, tableBody) {
   buttonDelete.className = 'action-button delete';
   buttonDelete.innerText = '🗑️';
   buttonDelete.onclick = async () => {
-    const userId = email; 
-    
+    const userId = email; // Certifique-se de que a variável 'email' está corretamente definida antes de ser usada
+  
     try {
-      // Verifica se o e-mail está associado a algum usuário autenticado
-      const signInMethods = await fetchSignInMethodsForEmail(auth, userId);
-      console.log(signInMethods);
-      
-      // Deleta o documento do Firestore
-      await deleteDoc(doc(db, "users", userId));
-      alert("Usuário excluído do Firestore com sucesso!");
-
-      // Se o usuário estiver autenticado, também exclui do Firebase Authentication
-      if (signInMethods.length < 0) {
-        // Se o e-mail está no Firebase Authentication, pode excluir também sem pedir a senha
-        const user = await auth.getUserByEmail(userId); // Pega o usuário autenticado
-
-        // Exclui o usuário do Firebase Authentication
-        await deleteUser(user);
-        alert("Usuário excluído do Firebase Authentication também!");
+      const response = await fetch('https://api-nca-production.up.railway.app/deleteuser', { // Corrige a URL da API
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: userId })
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json(); // Pega detalhes do erro retornado pelo servidor
+        throw new Error(errorData.message || 'Erro ao excluir usuário');
       }
-
+  
+      const result = await response.json();
+      alert(result.message);
+  
       // Recarrega a página para atualizar a lista de usuários
       window.location.href = '/gerenciador/usuarios/';
     } catch (error) {
@@ -369,9 +379,10 @@ function createNewTDUser(contador, email, profile, tableBody) {
       alert("Erro ao deletar usuário. Confira os logs.");
     }
   };
+  
+
 
   // Adiciona os botões à coluna de ícones
-  tdIcon.appendChild(buttonView);
   tdIcon.appendChild(buttonEdit);
   tdIcon.appendChild(buttonDelete);
 
@@ -510,7 +521,7 @@ async function saveUser(userId) {
 // Função auxiliar para realizar o hashing da senha via back-end
 async function hashPassword(password) {
   try {
-    const response = await fetch("https://nca-api.vercel.app/api/hashPassword", {
+    const response = await fetch("https://api-nca-production.up.railway.app/api/hashPassword", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ password })
@@ -555,14 +566,30 @@ document.addEventListener("DOMContentLoaded", () => {
   if (loginBtn) {
     loginBtn.addEventListener("click", () => {
       const provider = new GoogleAuthProvider();
+      provider.addScope('email'); // Request the email scope
+
       signInWithPopup(auth, provider)
-        .then((result) => {
-          const autorizado = verificarPermissao(result.user.email);
+        .then(async (result) => {
+          const user = result.user;
+          const email = user.email || user.providerData[0]?.email || null;
+
+          if (!email) {
+              console.error("No email found for the user. Logging out.");
+              signOut(auth);
+              window.location.href = "/login"; // Redirect to login
+              return;
+          }
+
+          const autorizado = await verificarPermissao(email);
           if (autorizado) {
+             
             window.location.href = "/gerenciador"; // Redireciona para a área de gerenciador
+            configurarPerfilUsuario(user.providerData); 
+            // Torna a interface visível para o usuário autenticado
+            document.querySelector('.body-manager').style.visibility = "visible";
           } else {
-            signOut(auth); // Desloga o usuário imediatamente
-            window.location.href = "/login"; // Redireciona para login se não tiver permissão
+              signOut(auth);
+              window.location.href = "/login"; // Redirect to login if no permission
           }
         })
         .catch((error) => {
@@ -607,13 +634,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById('Formulario');
 
-if (form) {
-  form.onsubmit = (e) => {
-    e.preventDefault();
-    const urlParams = new URLSearchParams(window.location.search);
-    const userId = urlParams.get('userId');
-    saveUser(userId);
-  };
+  if (form) {
+    form.onsubmit = (e) => {
+      e.preventDefault();
+      const urlParams = new URLSearchParams(window.location.search);
+      const userId = urlParams.get('userId');
+      saveUser(userId);
+    };
 }
 
 });

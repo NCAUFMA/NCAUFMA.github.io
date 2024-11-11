@@ -9,6 +9,7 @@ linklattes: http://lattes.cnpq.br/1818008360814563
 linklinkedin: https://www.linkedin.com/in/daniel-pinto-ti
 linkgithub: https://github.com/DanielMoreiraPinto
 linkorcid: https://orcid.org/0000-0002-1694-2612
+linkinstagram:
 ---
 
 

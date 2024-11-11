@@ -6,6 +6,10 @@ role: Professor
 affiliation: Universidade Federal do Maranhão / Departamento de Informática
 linkemail: francisco.glaubos@ufma.br
 linklattes: http://lattes.cnpq.br/1711180190759554
+linklinkedin:
+linkgithub:
+linkorcid:
+linkinstagram:
 ---
 
 

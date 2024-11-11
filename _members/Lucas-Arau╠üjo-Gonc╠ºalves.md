@@ -8,4 +8,6 @@ linkemail: araujo.lucas@nca.ufma.br
 linklattes:  http://lattes.cnpq.br/5799543583826695
 linklinkedin: https://www.linkedin.com/in/lucasaraujog/
 linkgithub: https://github.com/lucasaraujoz
+linkorcid:
+linkinstagram:
 ---

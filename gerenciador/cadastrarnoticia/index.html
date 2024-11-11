@@ -7,9 +7,8 @@ title: Cadastrar Notícia
 
 <form onsubmit="return false" method="POST" id="form_noticia" enctype="multipart/form-data">
     <div id="form_fields">
-
             <label for="titulo" class="labelfield">Título</label>
-            <input type="text" id="tituloNoticia" name="tituloNoticia" required minlength="10" maxlength="100" placeholder="Insira o seu título aqui" />
+            <input class="inputtexto" type="text" id="tituloNoticia" name="tituloNoticia" required minlength="10" maxlength="100" placeholder="Insira o seu título aqui" />
             
             <label for="imagem" class="labelfield">Imagem</label>
             <input type="file" accept="image/*" name="imagemNoticia" class="inputImage" id="ImagemPost"/>
@@ -23,13 +22,10 @@ title: Cadastrar Notícia
         
         <div class="button_row">
             <a href="../" class="cancelButton" >Cancelar</a>
-            <!--<button type="button" class = "cancelButton">Cancelar</button>-->
-            <button type="submit" class = "submit">Enviar</button>
+            <button type="submit" class="submit">Enviar</button>
         </div>
     </div>
 
 </form>
-
-<script src="../../assets/js/formNoticias.js"></script>
 
 

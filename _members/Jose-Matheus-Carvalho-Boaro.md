@@ -6,6 +6,8 @@ role: Ex-aluno
 linkemail: matheusboaro@gmai.com
 linklattes: http://lattes.cnpq.br/4164573357659740
 linklinkedin: https://www.linkedin.com/in/matheusboaro/
+linkgithub:
+linkorcid:
 linkinstagram: matheusboaro
 ---
 

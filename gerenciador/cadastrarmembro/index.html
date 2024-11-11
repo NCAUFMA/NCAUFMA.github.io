@@ -2,14 +2,11 @@
 layout: manager
 title: Cadastrar Membro
 ---
-
 <h1 class="tituloForm">Cadastre um novo Membro</h1>
-
-<form id="form_membro" onsubmit="return false" enctype="multipart/form-data" style="padding-top: 15%;overflow-y: auto;">
-
-    <div id="form_fields">
+<form id="form_membro" onsubmit="return false" enctype="multipart/form-data" style="overflow-y: auto;">
+    <div id="form_fields" class="form_membro">
         <label for="nomeMembro" class="labelName">Nome</label>
-        <input type="text" name="nome_membro" id="nomeMembro" required placeholder="Insira seu nome completo aqui" />
+        <input class="inputtexto" type="text" name="nome_membro" id="nomeMembro" required placeholder="Insira seu nome completo aqui" />
         
         <label for="cargo" class="labelName">Cargo</label>
         <select name="cargo_membro" id="cargo" required>
@@ -22,7 +19,7 @@ title: Cadastrar Membro
         </select>
 
         <label for="afiliacao" class="labelName">Afiliação</label>
-        <select name="afiliacao" id="afiliacao" required>
+        <select name="afiliacao" id="afiliacao" >
             <option value="" disabled selected hidden>Selecione sua afiliação aqui</option>
             <option value="DEINF">DEINF</option>
             <option value="Dep. Engenharia da Computação">Departamento Engenharia da Computação</option>
@@ -34,26 +31,26 @@ title: Cadastrar Membro
         <label for="inputLattes" class="labelName">Curriculo Lattes</label>
         <div id="lattesDiv">
             <span>https://lattes.cnpq.br/</span>
-            <input type="text" id="inputLattes" name="id_lattes" required placeholder="Coloque o seu ID aqui">
+            <input type="text" id="inputLattes" name="id_lattes"  placeholder="Coloque o seu ID aqui">
         </div>
         
         <label for="imagemMembro" class="labelName">Foto</label>
-        <input type="file" accept="image/*" name="imgMembro" class="inputImage" id="imagemMembro"/>
+        <input class="inputtexto" type="file" accept="image/*" name="imgMembro" class="inputImage" id="imagemMembro"/>
 
         <label for="emailMembro" class="labelName">E-mail</label>
-        <input type="email" name="email_membro" id = "emailMembro" placeholder="Insire seu e-mail aqui">
+        <input class="inputtexto" type="email" name="email_membro" id = "emailMembro" placeholder="Insire seu e-mail aqui">
 
         <label for="instaMembro" class="labelName">Instagram</label>
-        <input type="text" name="insta_membro" id = "instaMembro" placeholder="https://www.instagram.com/user/">
+        <input class="inputtexto" type="text" name="insta_membro" id = "instaMembro" placeholder="https://www.instagram.com/user/">
 
         <label for="linkedinMembro" class="labelName">LinkedIn</label>
-        <input type="text" name="linkedin_membro" id = "linkedinMembro" placeholder="www.linkedin.com/in/usuario">
+        <input class="inputtexto" type="text" name="linkedin_membro" id = "linkedinMembro" placeholder="www.linkedin.com/in/usuario">
 
         <label for="githubMembro" class="labelName">GitHub</label>
-        <input type="text" name="git_membro" id = "githubMembro" placeholder="https://github.com/usuario">
+        <input class="inputtexto" type="text" name="git_membro" id = "githubMembro" placeholder="https://github.com/usuario">
         
         <label for="orcidMembro" class="labelName">Orcid</label>
-        <input type="text" name="orcid_membro" id = "orcidMembro" placeholder="https://orcid.org/numero-usuario">
+        <input class="inputtexto" type="text" name="orcid_membro" id = "orcidMembro" placeholder="https://orcid.org/numero-usuario">
 
         <label for="descMembro" class="labelName">Descrição</label>
         <textarea name="desc_membro" id="descMembro" placeholder="Insira uma breve descrição ou biografia aqui"></textarea>
@@ -65,8 +62,4 @@ title: Cadastrar Membro
             <button type="submit" class="enviarButton" id="enviarButton">Enviar</button>
         </div>
     </div>
-
-
 </form>
-
-<script src="../../assets/js/formMembros.js"></script>

@@ -7,5 +7,7 @@ affiliation: Ciência da Computação
 linkemail: steve.ataky@nca.ufma.br
 linklattes: http://lattes.cnpq.br/1031971059949770
 linklinkedin: https://www.linkedin.com/in/steveataky/
+linkgithub:
+linkorcid:
 linkinstagram: "@tmatsteve"
 ---

@@ -167,7 +167,7 @@
 }
 .cardsUltimosProjetos {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;  
 }
 
@@ -175,7 +175,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: calc(33.33% - 60px);
+  max-width: calc(33.33% - 100px);
+  max-height: 40.6 rem;
   margin: 0;
   flex-grow: 1; /* Faz os cards crescerem igualmente */
   border-radius: 20px;

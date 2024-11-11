@@ -3,31 +3,31 @@ layout: manager
 title: Dashboard
 ---
 
-  <h1 class="titulopaginaadmin">Dashboard</h1>
+<h1 class="titulopaginaadmin">Dashboard</h1>
 
-  <div class="stats">
-      <div class="card">
-          <div class="icon">👨‍🏫</div>
-          <div class="info">
-              <h3>Membros</h3>
-              <p>60</p>
-          </div>
-      </div>
-      <div class="card">
-          <div class="icon">👥</div>
-          <div class="info">
-              <h3>Notícias</h3>
-              <p>6</p>
-          </div>
-      </div>
-      <div class="card">
-          <div class="icon">📚</div>
-          <div class="info">
-              <h3>Projetos</h3>
-              <p>20</p>
-          </div>
-      </div>
-      <div class="card">
+<div class="stats">
+    <div class="card">
+        <div class="icon">👨‍🏫</div>
+        <div class="info">
+            <h3>Membros</h3>
+            <p id="membrosCount">...</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="icon">👥</div>
+        <div class="info">
+            <h3>Notícias</h3>
+            <p id="noticiasCount">...</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="icon">📚</div>
+        <div class="info">
+            <h3>Projetos</h3>
+            <p id="projetosCount">...</p>
+        </div>
+    </div>
+    <div class="card">
         <div class="icon">📚</div>
         <div class="info">
             <h3>Publicações</h3>
@@ -38,33 +38,33 @@ title: Dashboard
         <div class="icon">📚</div>
         <div class="info">
             <h3>Laboratórios</h3>
-            <p>4</p>
+            <p id="laboratoriosCount">...</p>
         </div>
     </div>
-  </div>
+</div>
 
-  <!-- Carrossel -->
-  <div class="meu-carrossel swiper-container">
+<!-- Carrossel -->
+<div class="meu-carrossel swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <div class="swiper-slide" data-link="/gerenciador/membros">
             <h3>Gerenciar Membros</h3>
             <p>lorem ipsum</p>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide" data-link="/gerenciador/noticias">
             <h3>Gerenciar Notícias</h3>
             <p>lorem ipsum</p>
         </div>
-        <div class="swiper-slide"> 
+        <div class="swiper-slide" data-link="/gerenciador/projetos">
             <h3>Gerenciar Projetos</h3>
-            <p>lorem ipsum</p>            
+            <p>lorem ipsum</p>
         </div>
-        <div class="swiper-slide"> 
+        <div class="swiper-slide" data-link="/gerenciador/publicacoes">
             <h3>Gerenciar Publicações</h3>
-            <p>lorem ipsum</p>            
+            <p>lorem ipsum</p>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide" data-link="/gerenciador/laboratorios">
             <h3>Gerenciar Laboratórios</h3>
-            <p>lorem ipsum</p>           
+            <p>lorem ipsum</p>
         </div>
     </div>
     <div class="meu-carrossel-button-next swiper-button-next"></div>

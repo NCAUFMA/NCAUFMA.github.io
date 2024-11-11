@@ -6,6 +6,8 @@ role: Doutorado
 affiliation: DCCMAPI
 linkemail: thiago.freire@ifma.edu.br
 linklattes: http://lattes.cnpq.br/9791164136013322
+linklinkedin:
 linkgithub: https://github.com/thiago-freire
 linkorcid: 0009-0004-8093-4029
+linkinstagram:
 ---

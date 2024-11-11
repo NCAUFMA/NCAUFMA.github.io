@@ -1,5 +1,6 @@
 ---
 name: Tiago Bonini Borchartt
+image:
 description: Possui graduação em Ciência da Computação pelo Centro Universitário Franciscano (2008), Santa Maria - RS e Mestrado em Computação pela Universidade Federal de Santa Maria - UFSM. Possui Doutorado e Pós-Doutorado em Computação pela Universidade Federal Fluminense - UFF. Atualmente é professor do Departamento de Informática da Universidade Federal do Maranhão - UFMA.
 role: Professor
 affiliation: Departamento de Informática

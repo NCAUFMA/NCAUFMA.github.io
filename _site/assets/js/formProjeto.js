@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    const apiProjUrl = "http://localhost:3000/submitProjeto";
+    const apiProjUrl = "http://localhost:3000/api/submitProjeto";
     const formProjeto = document.getElementById("form_projeto");
     const inputFoto = document.getElementById("filefoto");
 
@@ -55,11 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
         formProjeto.addEventListener("submit", (e) => {
             e.preventDefault();
             const formData = new FormData(formProjeto);
-
-            // Mostra os dados enviados no console
-            for (var [key, value] of formData.entries()) {
-                console.log(key, value);
-            }
 
             // Coleta todos os elementos com a classe 'chip'
             const chips = document.querySelectorAll('.chip');
@@ -86,6 +81,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
                 .then(data => {
                     console.log('Sucesso:', data);
+
+                    // Limpa o formulário
+                    formProjeto.reset(); // Limpa todos os campos do formulário
+
+                    // Remove todos os chips
+                    const chipContainer = document.querySelector(".chip-container");
+                    chipContainer.innerHTML = ''; // Limpa todos os chips
+
                 })
                 .catch(error => {
                     console.error('Erro:', error);

@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    const apiNotUrl = "http://localhost:3000/submitNoticias";
+    const apiNotUrl = "http://localhost:3000/api/submitNoticias";
     
     const formNoticias = document.getElementById("form_noticia");
     if (formNoticias) {
