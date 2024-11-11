@@ -2,8 +2,7 @@
 name: Venícius Garcia Rego
 image: assets/images/membros/m22.png
 description: 
-links:
-	linkemail: venicius.gr@gmail.com
-	linklattes: https://lattes.cnpq.br/2586393336702038
+linkemail: venicius.gr@gmail.com
+linklattes: https://lattes.cnpq.br/2586393336702038
 ---
 

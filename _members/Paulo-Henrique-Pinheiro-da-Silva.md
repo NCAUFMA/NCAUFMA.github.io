@@ -4,8 +4,7 @@ image: assets/images/membros/m57.jpg
 description: 
 role: Graduação
 affiliation: LINT
-links:
-	linkemail: php.silva@discente.ufma.br
-	linklattes: https://lattes.cnpq.br/1771715534795633
+linkemail: php.silva@discente.ufma.br
+linklattes: https://lattes.cnpq.br/1771715534795633
 ---
 

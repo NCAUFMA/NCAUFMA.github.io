@@ -4,9 +4,8 @@ image: assets/images/membros/m32.jfif
 description: 
 role: Graduação
 affiliation: DEINF
-links:
-	linkemail: joana.silva@nca.ufma.br
-	linklattes:  http://lattes.cnpq.br/1155970797185692
-	linkinstagram: @kjoanaa_
+linkemail: joana.silva@nca.ufma.br
+linklattes:  http://lattes.cnpq.br/1155970797185692
+linkinstagram: @kjoanaa_
 ---
 

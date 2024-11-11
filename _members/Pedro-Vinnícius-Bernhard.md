@@ -4,11 +4,10 @@ image: assets/images/membros/m53.jpg
 description: 
 role: Mestrado
 affiliation: EQTL PIIR
-links:
-	linkemail: pedro.bernhard@nca.ufma.br
-	linklattes: http://lattes.cnpq.br/0530246307062341
-	linklinkedin: https://www.linkedin.com/in/pvbernhard
-	linkgithub: https://github.com/pvbernhard
-	linkinstagram: https://www.instagram.com/pvbernhard
+linkemail: pedro.bernhard@nca.ufma.br
+linklattes: http://lattes.cnpq.br/0530246307062341
+linklinkedin: https://www.linkedin.com/in/pvbernhard
+linkgithub: https://github.com/pvbernhard
+linkinstagram: https://www.instagram.com/pvbernhard
 ---
 
