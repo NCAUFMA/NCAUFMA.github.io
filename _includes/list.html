@@ -43,8 +43,7 @@
   {%- endfor %}
 
   {% if outros_group.size > 0 %}
-    {% assign outros_group = outros_group | group_by: "Outros" %}
-    {% assign ordered_grouped_data = ordered_grouped_data | push: outros_group %}
+    {% assign ordered_grouped_data = ordered_grouped_data | push: { "name": "Outros", "items": outros_group } %}
   {% endif %}
 
   {% assign grouped_data = ordered_grouped_data %}
