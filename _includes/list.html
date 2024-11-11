@@ -23,9 +23,19 @@
   %}
 
   {% assign role_order = "Professor,Doutorado,Mestrado,Graduação,Ex-aluno" | split: "," %}
-  
   {%- assign ordered_grouped_data = "" | split: "," %}
-  
+  {%- assign outros_group = emptyarray | split: "," %}
+
+  {%- for group in grouped_data %}
+    {%- if group.name == "" or group.name == nil %}
+      {% assign outros_group = outros_group | concat: group.items %}
+    {%- endif %}
+  {%- endfor %}
+
+  {% if outros_group != emptyarray %}
+    {% assign ordered_grouped_data = ordered_grouped_data | push: "Outros" %}
+  {% endif %}
+
   {% for role in role_order %}
     {% for group in grouped_data %}
       {% if group.name == role %}
@@ -33,6 +43,11 @@
       {% endif %}
     {% endfor %}
   {% endfor %}
+
+  {% if outros_group != emptyarray %}
+    {% assign outros_group = outros_group | group_by: "Outros" %}
+    {% assign ordered_grouped_data = ordered_grouped_data | push: outros_group %}
+  {% endif %}
   
   {% assign grouped_data = ordered_grouped_data %}
 {%- endif -%}
@@ -77,7 +92,13 @@
   {% for group in grouped_data %}
     {% assign data = group.items %}
     {% if include.component == "membros" %}
-    <div class="tipoecards section" data-title="{{ group.name }}">
+      {% if group.name == "Outros" %}
+        <div class="tipoecards section" data-title="Outros">
+          <h3 class="role titulosecao">Outros</h3>
+      {% else %}
+        <div class="tipoecards section" data-title="{{ group.name }}">
+          <h3 class="role titulosecao">{{ group.name }}</h3>
+      {% endif %}
     {% elsif include.component != "membros" %}
     <div class="tipoecards">
     {% endif %}      
@@ -85,8 +106,6 @@
         <h3 class="ano titulosecao">{{ group.name }}</h3> 
       {% elsif include.component == "projetos" %}
         <h3 class="group titulosecao">{{ group.name }}</h3> 
-      {% elsif include.component == "membros" %}
-        <h3 class="role titulosecao">{{ group.name }}</h3> 
       {% endif %}
 
       {% if include.component == "noticias" %}
@@ -119,6 +138,8 @@
           linklinkedin = d.linklinkedin
           linkemail = d.linkemail
           linkgithub = d.linkgithub
+          linkinstagram = d.linkinstagram
+          linkx = d.linkx
           name=d.name
           publisher=d.publisher
           repo=d.repo
