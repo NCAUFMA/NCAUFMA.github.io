@@ -8,7 +8,7 @@
 
 {%- if include.component == "noticias" or include.component == "publicacoes" -%}
   {% assign grouped_data = data
-    | group_by_exp: "d", "d.date | date: '%Y'"
+    | group_by: "date" 
     | sort: "name"
     | reverse
   %}
@@ -25,8 +25,8 @@
   %}
 
   {% assign role_order = "Professor,Doutorado,Mestrado,Graduação,Ex-aluno" | split: "," %}
-  {%- assign ordered_grouped_data = "" | split: "," %}
-  {%- assign outros_group = emptyarray | split: "," %}
+  {% assign ordered_grouped_data = emptyarray %}
+  {% assign outros_group = emptyarray %}
 
   {%- for group in grouped_data %}
     {%- if group.name == "" or group.name == nil %}
@@ -36,18 +36,20 @@
     {%- endif %}
   {%- endfor %}
 
-  {%- for member in data %}
+  {% for member in data %}
     {%- if member.role == "" or member.role == nil %}
       {% assign outros_group = outros_group | push: member %}
     {%- endif %}
   {%- endfor %}
 
-  {% if outros_group.size > 0 %}
-    {% assign ordered_grouped_data = ordered_grouped_data | push: { "name": "Outros", "items": outros_group } %}
-  {% endif %}
-
-  {% assign grouped_data = ordered_grouped_data %}
-{%- endif -%}
+  {%- if outros_group.size > 0 %}
+    {% assign grouped_data = ordered_grouped_data %}
+    {% assign outros_group_item = "{% raw %}{ \"name\": \"Outros\", \"items\": outros_group }{% endraw %}" %}
+    {% assign grouped_data = grouped_data | concat: outros_group_item %}
+  {%- else %}
+    {% assign grouped_data = ordered_grouped_data %}
+  {%- endif %}
+{% endif %}
 
 {% assign component_tags = emptyarray %}
 
